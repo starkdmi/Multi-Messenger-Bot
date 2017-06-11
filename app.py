@@ -27,7 +27,7 @@ aboutText = "About info ..."
 
 # ============================================================
 
-# Main function | Edit this function code to change capabilities of bot
+# Main function | Edit this function code to change bot capabilities
 def MessagesProcessing(text):
     if text.lower() in ["help", "/help", "помощь"]: # Help
         return helpText
