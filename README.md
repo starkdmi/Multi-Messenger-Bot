@@ -1,4 +1,4 @@
-# MultiMessengerBot
+# Multi Messenger Bot
 Chat bot which support 3 messengers in one time:
 - Facebook
 - Telegram
