@@ -169,6 +169,7 @@ class SetWebhookHandler(webapp2.RequestHandler):
         if url:
             self.response.write(json.dumps(json.load(urllib2.urlopen("https://api.telegram.org/bot" + TelegramToken + "/setWebhook", urllib.urlencode({"url": url})))))
 
+# Webhook class for answering to user messages from Telegram
 class WebhookHandler(webapp2.RequestHandler):
     def post(self):
         # Get json data 
@@ -176,9 +177,9 @@ class WebhookHandler(webapp2.RequestHandler):
 
         # Getting message
         try:
-            message = body['message']
+            message = body["message"]
         except:
-            message = body['edited_message']
+            message = body["edited_message"]
 
         text = message.get("text")
         chatId = message["chat"]["id"]
