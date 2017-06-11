@@ -64,7 +64,7 @@ def FBSendMessage(text, userId):
 
     # Create message sending request
     request = urllib2.Request("https://graph.facebook.com/v2.6/me/messages?access_token=" + FBGroupToken)
-    request.add_header('Content-Type', 'application/json')
+    request.add_header("Content-Type", "application/json")
     request.add_data(json.dumps(arguments))
 
     # Send message
