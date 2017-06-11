@@ -4,4 +4,4 @@ Chat bot which support 3 messengers in one time:
 - Telegram
 - VK
 
-Create your own structure of aplication which will working same on diferent messengers platforms. 
+Create structure of aplication which will working same on diferent messengers platforms. 
