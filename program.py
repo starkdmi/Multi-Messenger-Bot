@@ -1,17 +1,13 @@
-import StringIO
+import webapp2
 import json
-import logging
-import random
 import urllib
 import urllib2
-import unicodedata
-import re
-import datetime
-import webapp2
 
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
+
+# ============================================================
 
 # VK secret data | https://vk.com/dev/callback_api
 VKServerConfirmationToken = "f5d9d45e"
@@ -161,25 +157,20 @@ class FBWebhookHandler(webapp2.RequestHandler):
 
 class MeHandler(webapp2.RequestHandler):
     def get(self):
-        urlfetch.set_default_fetch_deadline(60)
         self.response.write(json.dumps(json.load(urllib2.urlopen("https://api.telegram.org/bot" + TelegramToken + "/getMe"))))
 
 class GetUpdatesHandler(webapp2.RequestHandler):
     def get(self):
-        urlfetch.set_default_fetch_deadline(60)
         self.response.write(json.dumps(json.load(urllib2.urlopen("https://api.telegram.org/bot" + TelegramToken + "/getUpdates"))))
 
 class SetWebhookHandler(webapp2.RequestHandler):
     def get(self):
-        urlfetch.set_default_fetch_deadline(60)
         url = self.request.get("url")
         if url:
             self.response.write(json.dumps(json.load(urllib2.urlopen("https://api.telegram.org/bot" + TelegramToken + "/setWebhook", urllib.urlencode({"url": url})))))
 
 class WebhookHandler(webapp2.RequestHandler):
     def post(self):
-        urlfetch.set_default_fetch_deadline(60)
-
         # Get json data 
         body = json.loads(self.request.body)
 
