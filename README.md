@@ -8,4 +8,4 @@ Create structure of aplication which will working same on diferent messengers pl
 
 __________________________________________________________________________________________________________________________________________
 
-New version is already available [here](https://github.com/starkov79/Multi-Messengers-Bot-2)
+New version is already available [here](https://github.com/starkov79/Multi-Messenger-Bot-2)
